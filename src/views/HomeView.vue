@@ -58,7 +58,7 @@ const dataGridEventCards = [
     description: t("events_section.row2.description"),
   },
   {
-    description: t("events_section.row1.location"),
+    description: t("events_section.row2.location"),
   },
   {
     icons: ["calendar"],
