@@ -21,10 +21,16 @@ import IconEmail from "@/components/icons/IconEmail.vue";
 
 <style scoped>
 .logo {
-  max-width: 180px;
+  max-width: 200px;
 }
 .email-icon {
   width: 100%;
   max-width: 28px;
+}
+
+@media (320px <= width <= 768px) {
+  .logo {
+    max-width: 180px;
+  }
 }
 </style>
