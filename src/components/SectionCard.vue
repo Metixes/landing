@@ -2,14 +2,14 @@
 import Button from "@/components/ui/Button.vue";
 
 const props = defineProps({
-  img: String,
-  imgAlt: String,
-  title: String,
-  description: String,
-  subText: String,
-  linkText: String,
-  link: String,
-  directionReverse: Boolean,
+  img: { type: String, default: "" },
+  imgAlt: { type: String, default: "" },
+  title: { type: String, default: "" },
+  description: { type: String, default: "" },
+  subText: { type: String, default: "" },
+  linkText: { type: String, default: "" },
+  link: { type: String, default: "" },
+  directionReverse: { type: Boolean, default: false },
 });
 </script>
 
