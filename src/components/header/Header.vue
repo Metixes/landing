@@ -1,10 +1,12 @@
 <script setup>
+import IconLogo from "@/components/icons/IconLogo.vue";
 import IconEmail from "@/components/icons/IconEmail.vue";
 </script>
 
 <template>
   <header class="header">
-    <h2 class="logo">Untitled</h2>
+    <!-- <h2 class="logo">Untitled</h2> -->
+    <IconLogo class="logo" />
     <a
       v-motion
       :initial="{ scale: 1 }"
@@ -18,6 +20,9 @@ import IconEmail from "@/components/icons/IconEmail.vue";
 </template>
 
 <style scoped>
+.logo {
+  max-width: 180px;
+}
 .email-icon {
   width: 100%;
   max-width: 28px;
