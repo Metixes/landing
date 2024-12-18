@@ -1,0 +1,61 @@
+@import './base.css';
+@import './header/header.css';
+
+#app {
+  font-weight: normal;
+}
+
+.container{
+  padding-block-start: 120px;
+  padding-block-end: 120px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background: var(--primary-surface);
+}
+
+@media (width > 1280px) {
+  .container{
+    padding-inline-start: 120px;
+    padding-inline-end: 120px;
+    padding-block-start: 120px;
+    padding-block-end: 120px;
+  }
+}
+
+@media (980px <= width <= 1280px) {
+  .container{
+    padding-inline-start: 88px;
+    padding-inline-end: 88px;
+    padding-block-start: 88px;
+    padding-block-end: 88px;
+  }
+}
+
+@media (768px <= width <= 980px) {
+  .container{
+    padding-inline-start: 72px;
+    padding-inline-end: 72px;
+    padding-block-start: 72px;
+    padding-block-end: 72px;
+  }
+}
+
+@media (480px <= width <= 768px) {
+  .container{
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    padding-block-start: 56px;
+    padding-block-end: 56px;
+  }
+}
+@media (320px <= width <= 480px) {
+  .container{
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 32px;
+    padding-block-end: 32px;
+  }
+}

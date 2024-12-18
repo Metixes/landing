@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 88px;
+}
+
+.logo {
+    letter-spacing: 0.3rem;
+    width: calc(100% + 0.3rem);
+    font-size: 1.25em;
+    line-height: 1.125;
+}
+
+@media (320px <= width <= 980px) {
+    .header{
+        padding: 24px 72px;
+    }
+    .email-icon{
+        width: 22px;
+    }
+}
+@media (320px <= width <= 768px) {
+    .header{
+        padding: 20px 32px;
+    }
+    .email-icon{
+        width: 28px;
+    }
+}
+@media (320px <= width <= 480px) {
+    .header{
+        padding: 15px 24px;
+    }
+}
