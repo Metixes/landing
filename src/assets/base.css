@@ -99,7 +99,7 @@ h1{
   font-family: 'Alata', sans-serif;
   letter-spacing: 0.3rem;
   width: calc(100% + 0.3rem);
-  font-size: 4.625em;
+  font-size: 4.3em;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -141,20 +141,19 @@ p{
     font-size: 12px;
   }
   h1{
-    font-size: 3.469rem;
+    font-size: 3rem;
   }
-  /* h3{
-    font-size: 0.875em;
-  } */
 }
 @media (320px <= width <= 768px) {
   body{
     font-size: 12px;
   }
   h1{
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
-  /* h3{
-    font-size: 0.875em;
-  } */
+}
+@media (320px <= width <= 450px) {
+  h1{
+    font-size: 1.9rem;
+  }
 }

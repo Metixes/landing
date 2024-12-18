@@ -1,11 +1,69 @@
 <script setup>
+import { useI18n } from "vue-i18n";
 import { defineAsyncComponent } from "vue";
-import dataFirstGridInfoCards from "@/utils/dataFirstGridInfoCards.js";
-import dataSecondGridInfoCards from "@/utils/dataSecondGridInfoCards.js";
-import dataGridUserCards from "@/utils/dataGridUserCards.js";
-import dataGridEventCards from "@/utils/dataGridEventCards.js";
 import SectionCard from "@/components/SectionCard.vue";
 import GridSectionCard from "@/components/GridSectionCards.vue";
+
+const { t } = useI18n();
+const dataFirstGridInfoCards = [
+  {
+    title: t("services.title1"),
+    subText: t("services.subText1"),
+  },
+  {
+    title: t("services.title2"),
+    subText: t("services.subText2"),
+  },
+  {
+    title: t("services.title3"),
+    subText: t("services.subText3"),
+  },
+  {
+    title: t("services.title4"),
+    subText: t("services.subText4"),
+  },
+];
+const dataSecondGridInfoCards = [
+  {
+    title: t("with_us.title1"),
+    subText: t("with_us.subText1"),
+  },
+  {
+    title: t("with_us.title2"),
+    subText: t("with_us.subText2"),
+  },
+  {
+    title: t("with_us.title3"),
+    subText: t("with_us.subText3"),
+  },
+  {
+    title: t("with_us.title4"),
+    subText: t("with_us.subText4"),
+  },
+];
+const dataGridUserCards = [];
+const dataGridEventCards = [
+  {
+    title: t("events_section.row1.title"),
+    description: t("events_section.row1.description"),
+  },
+  {
+    description: t("events_section.row1.location"),
+  },
+  {
+    icons: ["calendar"],
+  },
+  {
+    title: t("events_section.row2.title"),
+    description: t("events_section.row2.description"),
+  },
+  {
+    description: t("events_section.row1.location"),
+  },
+  {
+    icons: ["calendar"],
+  },
+];
 </script>
 
 <template>
@@ -13,60 +71,62 @@ import GridSectionCard from "@/components/GridSectionCards.vue";
     <SectionCard
       :img="'/images/image03.jpg'"
       :imgAlt="'Image 1'"
-      :title="'Semper feugiat'"
-      :description="'Sit Amet'"
-      :subText="'Sem astrum tortor consequat porta ornare arcu odio ut sem nulla pharetra elementum pulvinar etiam quam lacus.'"
-      :linkText="'Imperdiet etiam'"
+      :title="t('hero.title')"
+      :description="t('hero.desc')"
+      :subText="t('hero.subText')"
+      :linkText="t('button.free_request')"
+      :link="'mailto:business@GTEX.IO'"
       :directionReverse="false" />
     <div class="grid-cards">
       <GridSectionCard
-        v-for="card of dataFirstGridInfoCards"
-        :key="card.title"
-        :title="card.title"
-        :description="card.description"
+        v-for="(card, index) of dataFirstGridInfoCards"
+        :key="index"
+        :description="card.title"
         :subText="card.subText" />
     </div>
     <SectionCard
       :img="'/images/image02.jpg'"
       :imgAlt="'Image 2'"
-      :title="'Quam dignissim'"
-      :description="'Semper tortor'"
-      :subText="'Suspendisse in est ante tellus in hac habitasse platea vestibulum rhoncus turpis massa tincidunt.'"
-      :linkText="'Magna ultrices'"
+      :title="t('about_block.title')"
+      :description="t('about_block.desc')"
+      :subText="t('about_block.subText')"
+      :linkText="t('button.start_project')"
+      :link="'mailto:business@GTEX.IO'"
       :directionReverse="true" />
-    <div class="grid-cards">
+    <!-- <div class="grid-cards">
       <GridSectionCard
-        v-for="card of dataGridUserCards"
-        :key="card.title"
+        v-for="(card, index) of dataGridUserCards"
+        :key="index"
         :img="card.img"
         :imgAlt="card.imgAlt"
         :title="card.title"
         :description="card.description"
         :subText="card.subText" />
-    </div>
+    </div> -->
     <SectionCard
       :img="'/images/image06.jpg'"
       :imgAlt="'Image 3'"
-      :title="'Aliquam bibendum'"
-      :description="'Arcu elementum'"
-      :subText="'Sem viverra aliquet eget sit amet tellus. Lectus mauris ultrices in turpis massa tincidunt. Sodales neque.'"
-      :linkText="'Commodo amet'"
+      :title="t('our_cases.title')"
+      :description="t('our_cases.desc')"
+      :subText="t('our_cases.subText')"
+      :linkText="t('button.ready_to_start')"
+      :link="'mailto:business@GTEX.IO'"
       :directionReverse="false" />
     <div class="grid-cards">
       <GridSectionCard
-        v-for="card of dataSecondGridInfoCards"
-        :key="card.title"
-        :title="card.title"
-        :description="card.description"
+        v-for="(card, index) of dataSecondGridInfoCards"
+        :key="index"
+        :description="card.title"
         :subText="card.subText" />
     </div>
     <SectionCard
       :img="'/images/image04.jpg'"
       :imgAlt="'Image 3'"
-      :title="'Eu volutpat'"
-      :description="'Risus varius'"
-      :subText="'Pharetra et ultrices neque ornare aenean euismod elementum nisi quis ullamcorper velit. Lorem ipsum dolor sit amet.'"
-      :linkText="'Sed interdum'"
+      :title="t('start_with_us.title')"
+      :description="t('start_with_us.desc')"
+      :subText="t('start_with_us.subText')"
+      :linkText="t('button.ready_to_start')"
+      :link="'mailto:business@GTEX.IO'"
       :directionReverse="true" />
     <div class="grid-cards grid-events">
       <GridSectionCard
@@ -82,10 +142,11 @@ import GridSectionCard from "@/components/GridSectionCards.vue";
     <SectionCard
       :img="'/images/image01.jpg'"
       :imgAlt="'Image 3'"
-      :title="'Viverra nam'"
-      :description="'Aliquam'"
-      :subText="'Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Aliquam diam maecenas ultricies massa enim.'"
-      :linkText="'Risus nullam'"
+      :title="t('transform_your_future.title')"
+      :description="t('transform_your_future.desc')"
+      :subText="t('transform_your_future.subText')"
+      :linkText="t('button.ready_to_start')"
+      :link="'mailto:business@GTEX.IO'"
       :directionReverse="false" />
   </main>
 </template>

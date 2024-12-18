@@ -42,7 +42,7 @@ const props = defineProps({
           {{ description }}
         </h1>
         <p class="card-subtext">{{ subText }}</p>
-        <Button :text="linkText" />
+        <Button :text="linkText" :link="link" />
       </div>
     </div>
   </section>

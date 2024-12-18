@@ -39,15 +39,17 @@ const props = defineProps({
     </div>
 
     <div
+      v-if="icons.length"
       v-motion
       :initial="{ opacity: 0, y: 20 }"
       :visible="{ opacity: 1, y: 0 }"
       :duration="300"
-      v-if="icons.length"
       class="icon-container">
-      <svg v-for="icon of icons" :key="icon" :class="`icon icon-${icon}`">
-        <use :href="`/icons/sprite.svg#${icon}`" />
-      </svg>
+      <a href="mailto:business@GTEX.IO">
+        <svg v-for="icon of icons" :key="icon" :class="`icon icon-${icon}`">
+          <use :href="`/icons/sprite.svg#${icon}`" />
+        </svg>
+      </a>
     </div>
   </section>
 </template>

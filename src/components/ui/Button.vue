@@ -33,6 +33,7 @@ const props = defineProps({
   white-space: nowrap;
   align-self: flex-start;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .arrow-icon {
