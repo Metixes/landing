@@ -62,7 +62,7 @@ export default {
     row2: {
       title: "est.",
       description: "2022",
-      location: "Afula, Israel",
+      location: "Tel-Aviv, Israel",
       icons: ["calendar"],
     },
   },
